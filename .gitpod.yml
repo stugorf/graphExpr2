@@ -1,0 +1,8 @@
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: docker pull neo4j/neo4j-arm64-experimental:4.1-arm64 # runs during prebuild
+    command: echo 'start script'
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 7474
+    onOpen: open-preview
