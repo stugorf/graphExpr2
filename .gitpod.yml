@@ -8,11 +8,12 @@ tasks:
       neo4j:4.4.8 neo4j-server
     command: |
       docker run neo4j-server
+      ./instr.sh
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 7474
-    onOpen: open-browser
+    onOpen: ignore
     visibility: public
   - port: 7687
     visibility: public
