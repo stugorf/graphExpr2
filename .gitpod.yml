@@ -3,10 +3,11 @@ tasks:
   - init: |
       pip3 install neo4j      
       docker pull neo4j:4.4.8
-      docker run  -d \
-      -p 7474:7474 --publish=7687:7687 \
-      --volume=$HOME/neo4j/data:/data  \
-      --name neo4j-server              \
+      docker run  -d                    \
+      -p 7474:7474 --publish=7687:7687  \
+      --volume=$HOME/neo4j/data:/data   \
+      --name neo4j-server               \
+      --env NEO4J_AUTH=neo4j/tenaciousD \
       neo4j:4.4.8 
     command: |
       docker start neo4j-server
