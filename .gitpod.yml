@@ -4,10 +4,11 @@ tasks:
       docker pull neo4j:4.4.8
       docker run  -d \
       -p 7474:7474 --publish=7687:7687 \
-      --volume=$HOME/neo4j/data:/data \
-      neo4j:4.4.8 neo4j-server
+      --volume=$HOME/neo4j/data:/data  \
+      --name neo4j-server              \
+      neo4j:4.4.8 
     command: |
-      docker run neo4j-server
+      docker start neo4j-server
       ./instr.sh
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
