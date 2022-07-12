@@ -1,6 +1,7 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: |      
+  - init: |
+      pip3 install neo4j      
       docker pull neo4j:4.4.8
       docker run  -d \
       -p 7474:7474 --publish=7687:7687 \

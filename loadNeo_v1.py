@@ -17,3 +17,6 @@ with driver.session() as session:
     session.write_transaction(create_friend_of, "Alice", "Carl")
 
 driver.close()
+
+print("Try running the following query:")
+print("match (n)-[m]-(k) return n,m,k;")
