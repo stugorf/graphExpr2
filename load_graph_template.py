@@ -8,6 +8,7 @@ __all__     = ['']
 
 # Import
 import boto3
+import hydra
 import awswrangler as wr
 from hydra import compose, initialize
 from omegaconf import DictConfig

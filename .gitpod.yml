@@ -1,6 +1,7 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - init: |
+      pip install --upgrade pip
       pip3 install neo4j awswrangler boto3 hydra-core omegaconf
       docker pull neo4j:4.4.8
       docker run  -d                    \
