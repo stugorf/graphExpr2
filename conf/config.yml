@@ -1,0 +1,6 @@
+aws:
+  profile: devgraph
+  secret: beergraph
+  region: us-east-1
+logging:
+  level: INFO
