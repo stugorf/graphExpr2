@@ -1,0 +1,87 @@
+2022-10-19 05:47:08,393 - DEBUG - Logging initialized.
+2022-10-19 05:47:09,132 - ERROR - Error getting AWS secret: Primary config directory not found.
+Check that the config directory '/workspace/conf' exists and readable
+2022-10-19 05:47:09,133 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 05:50:29,075 - DEBUG - Logging initialized.
+2022-10-19 05:50:29,967 - ERROR - Error getting AWS secret: Primary config directory not found.
+Check that the config directory '/workspace/conf' exists and readable
+2022-10-19 05:50:29,967 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 05:54:38,587 - DEBUG - Logging initialized.
+2022-10-19 05:54:39,669 - ERROR - Error getting AWS secret: Cannot find primary config 'config'. Check that it's in your config search path.
+
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=file:///workspace/graphExpr2/conf
+	provider=schema, path=structured://
+2022-10-19 05:54:39,669 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 05:58:08,210 - DEBUG - Logging initialized.
+2022-10-19 05:58:09,092 - ERROR - Error getting AWS secret: Cannot find primary config 'config'. Check that it's in your config search path.
+
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=file:///workspace/graphExpr2/conf
+	provider=schema, path=structured://
+2022-10-19 05:58:09,092 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 06:00:44,948 - DEBUG - Logging initialized.
+2022-10-19 06:00:45,922 - INFO - Getting PatientGraph Secret...
+2022-10-19 06:00:46,020 - ERROR - Error getting AWS secret: An error occurred (ResourceNotFoundException) when calling the GetSecretValue operation: Secrets Manager can't find the specified secret.
+2022-10-19 06:00:46,021 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 06:02:34,997 - DEBUG - Logging initialized.
+2022-10-19 06:02:35,954 - INFO - Getting PatientGraph Secret...
+2022-10-19 06:02:36,043 - ERROR - Error getting AWS secret: An error occurred (ResourceNotFoundException) when calling the GetSecretValue operation: Secrets Manager can't find the specified secret.
+2022-10-19 06:02:36,043 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 06:04:02,619 - DEBUG - Logging initialized.
+2022-10-19 06:04:03,583 - INFO - Getting PatientGraph Secret...
+2022-10-19 06:04:03,584 - ERROR - Error getting AWS secret: Key 'secret' is not in struct
+    full_key: secret
+    object_type=dict
+2022-10-19 06:04:03,584 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 06:04:15,509 - DEBUG - Logging initialized.
+2022-10-19 06:04:16,481 - INFO - Getting PatientGraph Secret...
+2022-10-19 06:04:16,482 - ERROR - Error getting AWS secret: Key 'secret' is not in struct
+    full_key: secret
+    object_type=dict
+2022-10-19 06:04:16,482 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 06:04:47,757 - DEBUG - Logging initialized.
+2022-10-19 06:04:48,716 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:04:48,805 - ERROR - Error getting AWS secret: An error occurred (ResourceNotFoundException) when calling the GetSecretValue operation: Secrets Manager can't find the specified secret.
+2022-10-19 06:04:48,806 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 06:05:16,664 - DEBUG - Logging initialized.
+2022-10-19 06:05:17,615 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:05:17,702 - ERROR - Error getting AWS secret: An error occurred (ResourceNotFoundException) when calling the GetSecretValue operation: Secrets Manager can't find the specified secret.
+2022-10-19 06:05:17,702 - ERROR - Error creating Neo4j Driver: 'AppConf' object has no attribute 'secret'
+2022-10-19 06:07:45,532 - DEBUG - Logging initialized.
+2022-10-19 06:07:46,485 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:07:46,588 - ERROR - Error creating Neo4j Driver: string indices must be integers
+2022-10-19 06:12:26,375 - DEBUG - Logging initialized.
+2022-10-19 06:12:27,317 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:12:27,431 - ERROR - Error creating Neo4j Driver: string indices must be integers
+2022-10-19 06:14:16,341 - DEBUG - Logging initialized.
+2022-10-19 06:14:17,295 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:14:17,397 - ERROR - Error creating Neo4j Driver: string indices must be integers
+2022-10-19 06:15:18,786 - DEBUG - Logging initialized.
+2022-10-19 06:15:19,751 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:15:19,860 - ERROR - Error creating Neo4j Driver: string indices must be integers
+2022-10-19 06:16:22,911 - DEBUG - Logging initialized.
+2022-10-19 06:16:23,881 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:16:23,987 - ERROR - Error creating Neo4j Driver: string indices must be integers
+2022-10-19 06:16:53,719 - DEBUG - Logging initialized.
+2022-10-19 06:16:54,666 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:16:54,769 - ERROR - Error creating Neo4j Driver: the JSON object must be str, bytes or bytearray, not dict
+2022-10-19 06:17:37,530 - DEBUG - Logging initialized.
+2022-10-19 06:17:38,487 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:17:38,587 - ERROR - Error creating Neo4j Driver: URI scheme 'https' is not supported. Supported URI schemes are ['bolt', 'bolt+ssc', 'bolt+s', 'neo4j', 'neo4j+ssc', 'neo4j+s']. Examples: bolt://host[:port] or neo4j://host[:port][?routing_context]
+2022-10-19 06:18:37,050 - DEBUG - Logging initialized.
+2022-10-19 06:18:38,022 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:18:38,131 - ERROR - Error creating Neo4j Driver: URI scheme 'https' is not supported. Supported URI schemes are ['bolt', 'bolt+ssc', 'bolt+s', 'neo4j', 'neo4j+ssc', 'neo4j+s']. Examples: bolt://host[:port] or neo4j://host[:port][?routing_context]
+2022-10-19 06:22:01,411 - DEBUG - Logging initialized.
+2022-10-19 06:22:02,365 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:22:02,471 - ERROR - Error creating Neo4j Driver: URI scheme 'https' is not supported. Supported URI schemes are ['bolt', 'bolt+ssc', 'bolt+s', 'neo4j', 'neo4j+ssc', 'neo4j+s']. Examples: bolt://host[:port] or neo4j://host[:port][?routing_context]
+2022-10-19 06:22:49,847 - DEBUG - Logging initialized.
+2022-10-19 06:22:50,783 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:22:50,892 - ERROR - Error creating Neo4j Driver: The config settings "encrypted", "trust", "trusted_certificates", and "ssl_context" can only be used with the URI schemes ['bolt', 'neo4j']. Use the other URI schemes ['bolt+ssc', 'bolt+s', 'neo4j+ssc', 'neo4j+s'] for setting encryption settings.
+2022-10-19 06:24:54,101 - DEBUG - Logging initialized.
+2022-10-19 06:24:55,036 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:26:09,482 - DEBUG - Logging initialized.
+2022-10-19 06:26:10,450 - INFO - Getting BeerGraph Secret...
+2022-10-19 06:26:10,564 - ERROR - Secret: {'neo4j-user': 'neo4j', 'neo4j-password': 'tenaciousD', 'neo4j-url': 'bolt://7687-black-marmoset-m14t31zv.ws.ey-graviton.devspaces.com:443', 'neo4j-database': 'neo4j'}

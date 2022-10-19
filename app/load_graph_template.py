@@ -7,9 +7,13 @@ __all__     = ['']
 
 
 # Import
+import os
 import boto3
+import json
 import hydra
+from utils import *
 import awswrangler as wr
+from neo4j import GraphDatabase
 from hydra import compose, initialize
 from omegaconf import DictConfig
 
@@ -19,10 +23,11 @@ class AppConf:
 
     def init_db(self):
         try:
-            with initialize(config_path= os.path.join("..","conf",)):
+            with initialize(config_path= os.path.join("..","conf")):
                 cfg = compose(config_name="config")
-                log.info('Getting PatientGraph Secret...')
-                self.secret = wr.secretsmanager.get_secret("my-secret")
+                log.info('Getting BeerGraph Secret...')
+                self.secret = wr.secretsmanager.get_secret(cfg.aws.secret)
+                self.secret = json.loads(self.secret)
                 assert self.secret is not None, 'Secret not found'
         except Exception as err:
             log.error(f"Error getting AWS secret: {err}")
@@ -35,10 +40,11 @@ class AppConf:
                 self.driver     = GraphDatabase.driver(uri, auth=(user, password), encrypted=False)
         except Exception as err:
             log.error(f"Error creating Neo4j Driver: {err}")
+            raise err
 
 appconf     = AppConf()
 driver      = appconf.driver
 _database   = appconf.database
 secret      = appconf.secret
 
-print(secret)
+log.error(f'Secret: {secret}')
