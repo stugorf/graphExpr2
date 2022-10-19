@@ -5,7 +5,10 @@ __email__   = 'dhughes@octavebio.com'
 __version__ = '0.0.1dev'
 __all__     = ['']
 
+
 # Import
+import boto3
+import awswrangler as wr
 from hydra import compose, initialize
 from omegaconf import DictConfig
 
@@ -18,7 +21,7 @@ class AppConf:
             with initialize(config_path= os.path.join("..","conf",)):
                 cfg = compose(config_name="config")
                 log.info('Getting PatientGraph Secret...')
-                self.secret = get_secret(cfg.aws.secret, profile=cfg.aws.profile, region=cfg.aws.region)
+                self.secret = wr.secretsmanager.get_secret("my-secret")
                 assert self.secret is not None, 'Secret not found'
         except Exception as err:
             log.error(f"Error getting AWS secret: {err}")
@@ -36,3 +39,5 @@ appconf     = AppConf()
 driver      = appconf.driver
 _database   = appconf.database
 secret      = appconf.secret
+
+print(secret)

@@ -1,5 +1,5 @@
 aws:
-  profile: devgraph
+  profile: default
   secret: beergraph
   region: us-east-1
 logging:
