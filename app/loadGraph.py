@@ -46,4 +46,4 @@ driver      = appconf.driver
 _database   = appconf.database
 secret      = appconf.secret
 
-log.info(f'Secret: {secret["neo4j-user"]}')
+log.info(f'Secret Value: {secret["neo4j-user"]}')
