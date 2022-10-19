@@ -1,0 +1,6 @@
+2022-10-19 17:37:12,147 - DEBUG - Logging initialized.
+2022-10-19 17:37:13,142 - INFO - Getting BeerGraph Secret...
+2022-10-19 17:37:13,253 - ERROR - Secret: {'neo4j-user': 'neo4j', 'neo4j-password': 'tenaciousD', 'neo4j-url': 'bolt://7687-black-marmoset-m14t31zv.ws.ey-graviton.devspaces.com:443', 'neo4j-database': 'neo4j'}
+2022-10-19 17:38:20,130 - DEBUG - Logging initialized.
+2022-10-19 17:38:21,113 - INFO - Getting BeerGraph Secret...
+2022-10-19 17:38:21,217 - INFO - Secret: neo4j

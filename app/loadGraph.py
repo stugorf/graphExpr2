@@ -25,9 +25,8 @@ class AppConf:
         try:
             with initialize(config_path= os.path.join("..","conf")):
                 cfg = compose(config_name="config")
-                log.info('Getting BeerGraph Secret...')
-                self.secret = wr.secretsmanager.get_secret(cfg.aws.secret)
-                self.secret = json.loads(self.secret)
+                log.info('Getting AWS Secret...')
+                self.secret = json.loads(wr.secretsmanager.get_secret(cfg.aws.secret))
                 assert self.secret is not None, 'Secret not found'
         except Exception as err:
             log.error(f"Error getting AWS secret: {err}")
@@ -47,4 +46,4 @@ driver      = appconf.driver
 _database   = appconf.database
 secret      = appconf.secret
 
-log.error(f'Secret: {secret}')
+log.info(f'Secret: {secret["neo4j-user"]}')
